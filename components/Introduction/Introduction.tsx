@@ -1,3 +1,4 @@
+import { OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import React, { Suspense } from 'react'
 import Typewriter from 'typewriter-effect';
@@ -14,7 +15,7 @@ export default function Introduction() {
                         <Typewriter
                             options={{
                                 cursorClassName: "text-xl tracking-tight text-gray-900 font sm:text-6xl",
-                                wrapperClassName: "text-4xl text-white font-bold tracking-tight text-gray-900 font sm:text-6xl",
+                                wrapperClassName: "text-4xl  font-bold tracking-tight text-gray-900 font sm:text-6xl",
                                 strings: ['Hello', 'Namaste'],
                                 autoStart: true,
                                 loop: true,
@@ -28,11 +29,22 @@ export default function Introduction() {
                     </div>
                     <div>
                         <div className="h-screen">
-                            {/* <Canvas   >
+                            <Canvas
+                                camera={{ position: [2, 0, 12.25], fov: 10 }}
+                            >
+                                <ambientLight intensity={1} />
+                                <ambientLight intensity={0.1} />
+                                <directionalLight intensity={0.4} />
                                 <Suspense fallback={null}>
-                                    <Model />
+                                    <Model position={[0.025, -0.9, 0]} />
                                 </Suspense>
-                            </Canvas> */}
+                                <OrbitControls
+                                    autoRotate={false}
+                                    enableZoom={false}
+                                    enablePan={false}
+                                    enableRotate={true}
+                                />
+                            </Canvas>
                         </div>
                     </div>
                 </div>
