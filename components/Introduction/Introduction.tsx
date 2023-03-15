@@ -2,8 +2,11 @@ import { OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import React, { Suspense } from 'react'
 import Typewriter from 'typewriter-effect';
+import post from "../../assets/pose2.png"
 
 import { Model } from '../../assets/Model';
+
+import { motion } from 'framer-motion'
 
 export default function Introduction() {
 
@@ -12,24 +15,29 @@ export default function Introduction() {
             <div className="relative h-screen overflow-hidden ">
                 <div className="relative grid items-center grid-cols-2 px-4 mx-auto max-w-7xl sm:static sm:px-6 lg:px-8">
                     <div className="sm:max-w-lg">
-                        <Typewriter
-                            options={{
-                                cursorClassName: "text-xl tracking-tight text-gray-900 font sm:text-6xl",
-                                wrapperClassName: "text-4xl  font-bold tracking-tight text-gray-900 font sm:text-6xl",
-                                strings: ['Hello', 'Namaste'],
-                                autoStart: true,
-                                loop: true,
-                            }}
-                        />
-                        <p className="mt-4 text-xl text-gray-500">
-                            I'm Chris Thapa, a developer with about 4 years of experience.
-                            I'm passionate about creating elegant, efficient code that solves real-world problems.
-                            Let's work together to bring your ideas to life.
-                        </p>
+                        <div className='grid grid-cols-2 items-end'>
+                            <Typewriter
+                                options={{
+                                    cursorClassName: "text-xl tracking-tight text-gray-900 font sm:text-6xl",
+                                    wrapperClassName: "text-4xl  font-bold tracking-tight text-gray-900 font sm:text-6xl",
+                                    strings: ['Hello', 'Namaste'],
+                                    autoStart: true,
+                                    loop: true,
+                                }}
+                            />
+                        </div>
+                        <motion.div
+                            initial={{ opacity: 0, }}
+                            animate={{ opacity: 1, }}
+                            transition={{ duration: 0.5 }}
+                            className="mt-4 text-xl text-gray-500 font-mono">
+                            I'm Chris Thapa, feel free to know me
+                        </motion.div>
                     </div>
                     <div>
-                        <div className="h-screen">
-                            <Canvas
+                        <motion.div className="h-screen flex items-end" initial={{ scale: 1.5 }} animate={{ scale: 1 }} whileHover={{ scale: 1.02 }}>
+                            <img src={post.src} height={800} className="" width={800} alt={''} />
+                            {/* <Canvas
                                 camera={{ position: [2, 0, 12.25], fov: 10 }}
                             >
                                 <ambientLight intensity={1} />
@@ -44,8 +52,8 @@ export default function Introduction() {
                                     enablePan={false}
                                     enableRotate={true}
                                 />
-                            </Canvas>
-                        </div>
+                            </Canvas> */}
+                        </motion.div>
                     </div>
                 </div>
             </div>

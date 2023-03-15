@@ -1,11 +1,12 @@
-import Image from 'next/image';
 import React from 'react'
-import post from "../../assets/pose.png";
+import { useState } from "react";
 
 export default function Contact() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className='min-h-screen bg-red-400' id="contact">
-      <Image src={'/pose.png'} height={200} width={200} loader={(load) => ""} alt={''} />
+    <div style={{ backgroundImage: "url(https://www.imaginefactory.com/wp-content/uploads/2017/04/SPACES_BG-2.jpg)", }} className='min-h-screen flex items-center justify-center bg-gradient-to-r from-red-500 to-pink-500' id="contact">
+     
     </div>
   )
 }
+

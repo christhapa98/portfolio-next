@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import React from 'react'
+import { ScrollToTop } from '../ScrollToTop'
 import Footer from './Footer'
 import Header from './Header'
 
@@ -13,6 +14,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <main className='min-h-screen bg-gray-200'>
                 {children}
             </main>
+            <ScrollToTop />
         </div>
     )
 }
