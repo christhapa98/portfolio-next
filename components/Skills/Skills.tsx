@@ -3,16 +3,17 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 export default function Skills() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   return (
     <motion.section
       style={{ backgroundImage: "url(https://www.imaginefactory.com/wp-content/uploads/2017/04/SPACES_BG-2.jpg)", }}
-      className='min-h-screen flex items-center justify-center'
+      className='flex items-center justify-center min-h-screen'
       id="skills">
-        <div className='absolute w-screen h-screen bg-black opacity-75'/>
+      <div className='absolute w-screen h-screen bg-black opacity-75' />
       <motion.div
         layout
         data-isOpen={isOpen}
+        style={{ backgroundImage: "url(https://www.imaginefactory.com/wp-content/uploads/2017/04/SPACES_BG-2.jpg)", }}
         whileHover={{ scale: isOpen ? 1 : 1.2 }}
         className={`parent z-10 ${!isOpen && " hover:animate-pulse"} cursor-pointer`}
         onClick={() => setIsOpen(!isOpen)}
@@ -20,11 +21,11 @@ export default function Skills() {
         <motion.div
           initial={{ opacity: 0, scale: isOpen ? 1 : 0 }}
           animate={{ opacity: isOpen ? 1 : 0, scale: isOpen ? 1 : 0 }}
-          transition={{ duration: 2 }} className={`child  mx-auto  ${isOpen ? "" : "hidden"}`}>
-          <h2 className="text-2xl font-mono font-bold text-gray-900 sm:text-3xl text-center border-b-2 pb-8 uppercase">
+          transition={{ duration: 2 }} className={`child  mx-auto  ${isOpen ? "" : "hidden"} flex flex-col justify-between`}>
+          <h2 className="pb-8 font-mono text-2xl font-bold text-center text-gray-900 uppercase border-b-2 sm:text-3xl">
             Skills
           </h2>
-          <div className="mt-6 grid grid-cols-2 gap-x-16 md:grid-cols-7 lg:mt-8">
+          <div className="grid grid-cols-4 gap-5 mt-6 md:gap-x-16 md:grid-cols-7 lg:mt-8">
             {skills.map((skill) => (
               <Skill
                 key={skill.name}
@@ -73,18 +74,14 @@ export const skills = [
     name: 'NestJS',
     icon: "https://res.cloudinary.com/practicaldev/image/fetch/s--xfAYl4Wt--/c_imagga_scale,f_auto,fl_progressive,h_1080,q_auto,w_1080/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/899zzeo7c2i92zv9ukyr.png"
   },
-  {
-    name: 'Tableau',
-    icon: "https://japio.com/wp-content/uploads/2022/02/Tableau-Icon.png"
-  },
 ];
 
 export const Skill = ({ name, description, icon }: any) => (
   <div className="flex items-center mb-6">
-    <div className="flex flex-col gap-2 justify-center items-center">
-      <img src={icon} className="hover:scale-110 rounded-full w-16 h-16 object-cover" />
+    <div className="flex flex-col items-center justify-center gap-2">
+      <img src={icon} className="object-cover w-16 h-16 rounded-full hover:scale-110" />
       <h4 className="font-semibold">{name}</h4>
-      <p className="text-gray-600 text-center">{description}</p>
+      <p className="text-center text-gray-600">{description}</p>
     </div>
   </div>
 );

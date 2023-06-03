@@ -12,11 +12,11 @@ export function Model(props: any) {
   const { nodes, materials }: any = useGLTF('https://models.readyplayer.me/640f69b4bac0c95c99cc585e.glb')
 
   return (
-    <group {...props} ref={group} dispose={null}>
+    <group  {...props} ref={group} dispose={null}>
       <primitive object={nodes?.Hips} />
-      <skinnedMesh geometry={nodes?.Wolf3D_Body.geometry} material={materials?.Wolf3D_Body} skeleton={nodes?.Wolf3D_Body.skeleton} />
-      <skinnedMesh geometry={nodes?.Wolf3D_Outfit_Bottom.geometry} material={materials?.Wolf3D_Outfit_Bottom} skeleton={nodes?.Wolf3D_Outfit_Bottom.skeleton} />
-      <skinnedMesh geometry={nodes?.Wolf3D_Outfit_Footwear.geometry} material={materials?.Wolf3D_Outfit_Footwear} skeleton={nodes?.Wolf3D_Outfit_Footwear.skeleton} />
+      {/* <skinnedMesh geometry={nodes?.Wolf3D_Body.geometry} material={materials?.Wolf3D_Body} skeleton={nodes?.Wolf3D_Body.skeleton} /> */}
+      {/* <skinnedMesh geometry={nodes?.Wolf3D_Outfit_Bottom.geometry} material={materials?.Wolf3D_Outfit_Bottom} skeleton={nodes?.Wolf3D_Outfit_Bottom.skeleton} /> */}
+      {/* <skinnedMesh geometry={nodes?.Wolf3D_Outfit_Footwear.geometry} material={materials?.Wolf3D_Outfit_Footwear} skeleton={nodes?.Wolf3D_Outfit_Footwear.skeleton} /> */}
       <skinnedMesh geometry={nodes?.Wolf3D_Outfit_Top.geometry} material={materials?.Wolf3D_Outfit_Top} skeleton={nodes?.Wolf3D_Outfit_Top.skeleton} />
       <skinnedMesh geometry={nodes?.Wolf3D_Hair.geometry} material={materials?.Wolf3D_Hair} skeleton={nodes?.Wolf3D_Hair.skeleton} />
       <skinnedMesh name="EyeLeft" geometry={nodes?.EyeLeft.geometry} material={materials?.Wolf3D_Eye} skeleton={nodes?.EyeLeft.skeleton} morphTargetDictionary={nodes?.EyeLeft.morphTargetDictionary} morphTargetInfluences={nodes?.EyeLeft.morphTargetInfluences} />

@@ -1,15 +1,15 @@
 import React from 'react'
 import { Link } from 'react-scroll';
-import post from "../../assets/pose2.png";
+import post from "../../assets/pose.png";
 import { motion } from 'framer-motion';
 
 export default function Header() {
     const links = [
         { title: 'About', link: "about" },
         { title: "Skills", link: "skills" },
-        { title: "Services", link: "services" },
-        { title: "Portfolio", link: "portfolio" },
-        { title: "Contact", link: "contact" },
+        // { title: "Services", link: "services" },
+        // { title: "Portfolio", link: "portfolio" },
+        // { title: "Contact", link: "contact" },
     ];
     return (
         <header className="fixed z-50 transform -translate-x-1/2 bg-white shadow top-2 left-1/2 rounded-3xl">

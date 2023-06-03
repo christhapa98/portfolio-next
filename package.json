@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next build && next export",
     "start": "next start",
     "lint": "next lint"
   },
@@ -21,6 +22,8 @@
     "react": "18.2.0",
     "react-colorful": "^5.6.1",
     "react-dom": "18.2.0",
+    "react-pdf": "^7.0.1",
+    "react-responsive-carousel": "^3.2.23",
     "react-scroll": "^1.8.9",
     "react-slick": "^0.29.0",
     "three": "^0.150.1",
