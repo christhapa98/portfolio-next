@@ -7,12 +7,12 @@ export default function Header() {
     const links = [
         { title: 'About', link: "about" },
         { title: "Skills", link: "skills" },
-        // { title: "Services", link: "services" },
+        { title: "Services", link: "services" },
         // { title: "Portfolio", link: "portfolio" },
         // { title: "Contact", link: "contact" },
     ];
     return (
-        <header className="fixed z-50 transform -translate-x-1/2 bg-white shadow top-2 left-1/2 rounded-3xl">
+        <header className="fixed z-50 transition-all transform -translate-x-1/2 bg-white shadow hover:scale-110 top-2 left-1/2 rounded-3xl">
             <nav className="flex items-center justify-between gap-5 p-2 mx-auto max-w-7xl lg:px-8" aria-label="Global">
                 <Link to={"introduction"} smooth={true} duration={500} className="cursor-pointer">
                     <img src={post.src} height={40} width={40} alt={''} />
