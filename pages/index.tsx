@@ -5,13 +5,14 @@ import Layout from "@/components/Layout/Layout";
 import Portfolio from "@/components/Portfolio/Portfolio";
 import Services from "@/components/Services/Services";
 import Skills from "@/components/Skills/Skills";
+import Github from "@/components/git/Git";
 
 export default function Home() {
   return (
     <Layout>
       <>
         <Introduction />
-        <About />
+        <Github />
         <Skills />
         <Services/>
         <Portfolio />

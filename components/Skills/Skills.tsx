@@ -9,34 +9,21 @@ export default function Skills() {
       style={{ backgroundImage: "url(https://www.imaginefactory.com/wp-content/uploads/2017/04/SPACES_BG-2.jpg)", }}
       className='flex items-center justify-center min-h-screen'
       id="skills">
-      <div className='absolute w-screen h-screen bg-black opacity-75' />
-      <motion.div
-        layout
-        data-isOpen={isOpen}
-        style={{ backgroundImage: "url(https://www.imaginefactory.com/wp-content/uploads/2017/04/SPACES_BG-2.jpg)", }}
-        whileHover={{ scale: isOpen ? 1 : 1.2 }}
-        className={`parent z-10 ${!isOpen && " hover:animate-pulse"} cursor-pointer`}
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <motion.div
-          initial={{ opacity: 0, scale: isOpen ? 1 : 0 }}
-          animate={{ opacity: isOpen ? 1 : 0, scale: isOpen ? 1 : 0 }}
-          transition={{ duration: 2 }} className={`child  mx-auto  ${isOpen ? "" : "hidden"} flex flex-col justify-between`}>
-          <h2 className="pb-8 font-mono text-2xl font-bold text-center text-gray-900 uppercase border-b-2 sm:text-3xl">
-            Skills
-          </h2>
-          <div className="grid grid-cols-4 gap-5 mt-6 md:gap-x-16 md:grid-cols-7 lg:mt-8">
-            {skills.map((skill) => (
-              <Skill
-                key={skill.name}
-                name={skill.name}
-                description={""}
-                icon={skill.icon}
-              />
-            ))}
-          </div>
-        </motion.div>
-      </motion.div>
+      <div className={` bg-white p-10 rounded-2xl`}>
+        <h2 className="pb-8 font-mono text-2xl font-bold text-center text-gray-900 uppercase border-b-2 sm:text-3xl">
+          Skills
+        </h2>
+        <div className="grid grid-cols-4 gap-5 mt-6 md:gap-x-16 md:grid-cols-7 lg:mt-8">
+          {skills.map((skill) => (
+            <Skill
+              key={skill.name}
+              name={skill.name}
+              description={""}
+              icon={skill.icon}
+            />
+          ))}
+        </div>
+      </div>
     </motion.section>
   )
 }
