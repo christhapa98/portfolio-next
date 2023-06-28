@@ -1,0 +1,27 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+#   pull_request:
+#     branches: [ "main" ]
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: thapachris9
+          password: 15253123samir
+
+      - name: Build and push Docker image
+        run: docker build -t thapachris9/portfolio:latest .
+        
+      - name: Push Docker image to registry
+        run: docker push thapachris9/portfolio:latest
