@@ -30,7 +30,7 @@ export default function Introduction() {
                             animate={{ opacity: 1, }}
                             transition={{ duration: 0.5 }}
                             className="mt-4 font-mono text-3xl text-gray-500">
-                            I'm Chris. I design and build Digital Products
+                            I`&apos;`m Chris. I design and build Digital Products
                         </motion.div>
                     </div>
                     <div>
