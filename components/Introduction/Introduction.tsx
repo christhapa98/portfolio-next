@@ -8,11 +8,12 @@ import { motion, AnimatePresence } from 'framer-motion'
 export default function Introduction() {
     const [isHovered, setIsHovered] = useState(false);
     const image = !isHovered ? post : pose2;
+
     return (
         <div className='min-h-screen bg-gradient-to-br from-slate-100 via-gray-300 to-neutral-400' id="introduction">
             <div className="relative h-screen overflow-hidden ">
                 <div className="relative grid items-center grid-cols-2 px-4 mx-auto max-w-7xl sm:static sm:px-6 lg:px-8">
-                <div className="sm:max-w-lg">
+                    <div className="sm:max-w-lg">
                         <div className='grid items-end grid-cols-2'>
                             <Typewriter
                                 options={{
@@ -28,8 +29,8 @@ export default function Introduction() {
                             initial={{ opacity: 0, }}
                             animate={{ opacity: 1, }}
                             transition={{ duration: 0.5 }}
-                            className="mt-4 font-mono text-xl text-gray-500">
-                            Im Chris
+                            className="mt-4 font-mono text-3xl text-gray-500">
+                            I'm Chris. I design and build Digital Products
                         </motion.div>
                     </div>
                     <div>

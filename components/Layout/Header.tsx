@@ -32,4 +32,5 @@ const links = [
     { title: 'About', link: "about" },
     { title: "Skills", link: "skills" },
     { title: "Services", link: "services" },
+    // { title: "Projects", link: "projects" },
 ];

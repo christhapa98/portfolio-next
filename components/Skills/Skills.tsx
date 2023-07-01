@@ -10,9 +10,6 @@ export default function Skills() {
       className='flex items-center justify-center min-h-screen bg-gradient-to-tl from-teal-700 via-emerald-700 to-green-600'
       id="skills">
       <div className={` bg-white p-10 rounded-2xl`}>
-        <h2 className="pb-8 font-mono text-2xl font-bold text-center text-gray-900 uppercase border-b-2 sm:text-3xl">
-          Skills
-        </h2>
         <div className="grid grid-cols-4 gap-5 mt-6 md:gap-x-16 md:grid-cols-7 lg:mt-8">
           {skills.map((skill) => (
             <Skill
