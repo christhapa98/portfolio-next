@@ -6,8 +6,8 @@ export default function Skills() {
   const [isOpen, setIsOpen] = useState(true);
   return (
     <motion.section
-      style={{ backgroundImage: "url(https://www.imaginefactory.com/wp-content/uploads/2017/04/SPACES_BG-2.jpg)", }}
-      className='flex items-center justify-center min-h-screen'
+      // style={{ backgroundImage: "url(https://www.imaginefactory.com/wp-content/uploads/2017/04/SPACES_BG-2.jpg)", }}
+      className='flex items-center justify-center min-h-screen bg-gradient-to-tl from-teal-700 via-emerald-700 to-green-600'
       id="skills">
       <div className={` bg-white p-10 rounded-2xl`}>
         <h2 className="pb-8 font-mono text-2xl font-bold text-center text-gray-900 uppercase border-b-2 sm:text-3xl">

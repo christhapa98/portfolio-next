@@ -29,7 +29,7 @@ export default function Introduction() {
                             animate={{ opacity: 1, }}
                             transition={{ duration: 0.5 }}
                             className="mt-4 font-mono text-xl text-gray-500">
-                            Im Chris Thapa, feel free to know me
+                            Im Chris
                         </motion.div>
                     </div>
                     <div>
