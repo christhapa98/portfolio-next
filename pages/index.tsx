@@ -12,8 +12,8 @@ export default function Home() {
         <Introduction />
         <Github />
         <Skills />
-        <Services/>
-        {/* <Projects/> */}
+        <Services />
+        <Projects />
       </>
     </Layout>
   )
