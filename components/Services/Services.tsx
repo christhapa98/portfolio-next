@@ -31,4 +31,9 @@ const services = [
     image: "https://img.freepik.com/free-vector/web-developers-courses-computer-programming-web-design-script-coding-study-computer-science-student-learning-interface-structure-components_335657-2542.jpg",
     description: "Develop Web Applications using React, MERN, Node, Express"
   },
+  {
+    name: "MVP Products",
+    image: "https://img.freepik.com/free-vector/web-developers-courses-computer-programming-web-design-script-coding-study-computer-science-student-learning-interface-structure-components_335657-2542.jpg",
+    description: "Build Fast MVP Products"
+  },
 ]
