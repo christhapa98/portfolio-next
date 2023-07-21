@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Image from 'next/image';
 
 export default function Skills() {
   const [isOpen, setIsOpen] = useState(true);
@@ -63,7 +62,7 @@ export const skills = [
 export const Skill = ({ name, description, icon }: any) => (
   <div className="flex items-center mb-6">
     <div className="flex flex-col items-center justify-center gap-2">
-      <Image height={1000} width={1000} alt={icon} src={icon} className="object-cover w-16 h-16 rounded-full hover:scale-110" />
+      <img src={icon} className="object-cover w-16 h-16 rounded-full hover:scale-110" />
       <h4 className="font-semibold">{name}</h4>
       <p className="text-center text-gray-600">{description}</p>
     </div>
